@@ -40,7 +40,7 @@ func New(src Source) *Rand { return &Rand{src} }
 func (r *Rand) Seed(seed int64) { r.src.Seed(seed) }
 
 // Int63 returns a non-negative pseudo-random 63-bit integer as an int64.
-func (r *Rand) Int63() int64 { return r.src.Int63() }
+func (r *Rand) Int63() int64 { return Int63() }
 
 // Uint32 returns a pseudo-random 32-bit value as a uint32.
 func (r *Rand) Uint32() uint32 { return uint32(r.Int63() >> 31) }
