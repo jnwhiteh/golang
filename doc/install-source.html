@@ -121,10 +121,12 @@ if necessary.
 <p>Go will install to a directory named <code>go</code>.
 Change to the directory that will be its parent
 and make sure the <code>go</code> directory does not exist.
-Then check out the repository:</p>
+Then check out the repository and sync to the release version:</p>
 
 <pre>
-$ hg clone -u release https://code.google.com/p/go
+$ hg clone https://code.google.com/p/go
+$ cd go
+$ hg update release
 </pre>
 
 <h2 id="head">(Optional) Switch to the default branch</h2>
